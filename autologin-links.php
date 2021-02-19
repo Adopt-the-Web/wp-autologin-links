@@ -561,7 +561,7 @@ function pkg_autologin_plugin_add_extra_profile_fields() {
         <span id="pkg_autologin_user_id" style="display:none"><?php echo $user_id; ?></span>
         <img style="display:none;" id="pkg_autologin_link_wait_spinner" src="<?php echo plugins_url("wait.gif", __FILE__); ?>" />
         <span id="pkg_autologin_unsaved_marker" style="display:none">&#91;<?php _e("Unsaved", PKG_AUTOLOGIN_LANGUAGE_DOMAIN);?>&#93;</span>
-        <p id="pkg_autologin_link"><?php echo ($current_link_code ? home_url('?' . PKG_AUTOLOGIN_VALUE_NAME . "=$current_link_code") : "-"); ?></p>
+        <p id="pkg_autologin_link"><a target="_blank" href="<?php echo ($current_link_code ? home_url('?' . PKG_AUTOLOGIN_VALUE_NAME . "=$current_link_code") : "-"); ?>"><?php echo ($current_link_code ? home_url('?' . PKG_AUTOLOGIN_VALUE_NAME . "=$current_link_code") : "-"); ?></a></p>
         <?php if (pkg_autologin_check_modify_permissions()) { pkg_autologin_add_control_buttons($current_link_code, $user_id); } else { ?>
           <i>[<?php _e("Please ask an administrator to change your login link", PKG_AUTOLOGIN_LANGUAGE_DOMAIN);?>]</i>
         <?php } ?>
